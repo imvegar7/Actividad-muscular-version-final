@@ -1,0 +1,187 @@
+
+#----------------------------------------------------------
+#--------Actividad muscular(sEMG)-Voluntarios ------------
+#----------------------------------------------------------
+
+
+# Los datos están en un archivo de Excel con extensión .txt----
+
+library(readxl)
+datos <- read_excel(file.choose(), sheet='Hoja1')
+head(datos)
+
+# Disponer las columnas como vectores-------------------------
+attach(datos) 
+
+# Definir o redefinir los niveles de las variable cualitativas
+# con la función levels( )------------------------------------
+
+#sexo
+levels(datos$sexo)
+levels(datos$sexo) <- c('f','m')
+levels(datos$sexo)
+
+#mano
+levels(datos$mano)
+levels(datos$mano)<- c('d','i')
+levels(datos$mano)
+
+#fdeporte
+levels(datos$fdeporte)
+levels(datos$fdeporte) <- c('nunca','casi nunca','de vez en cuando',
+                            'a menudo','muy a menudo')
+levels(datos$fdeporte)
+
+#ocupacion
+levels(datos$ocupacion)
+levels(datos$ocupacion) <- c('no profesional','estudiante',
+                             'profesional')
+levels(datos$ocupacion)
+
+# estado-nivel de referencia reposo
+levels(datos$estado)
+levels(datos$estado) <- c('reposo','estres')
+levels(datos$estado)
+
+#lado
+levels(datos$lado)
+levels(datos$lado) <- c('izquierdo','derecho')
+levels(datos$lado)
+
+
+# Número de variables y observaciones------------------------
+dim(datos )
+
+# Variables y niveles de cada una----------------------------
+str(datos)
+
+#-------------------------------------------------------------
+# Boxplot para la actividad muscular dados los factores
+# estado y lado
+
+
+boxplot(actmuscular~ estado , ylab="Actividad muscular (v)", 
+        xlab="Estados")
+
+boxplot(actmuscular~ estado+lado, ylab="Actividad muscular (v)", 
+        xlab="Estados para lado derecho e izquierdo")
+
+#-------------------------------------------------------------
+# Histograma para la variable actmuscular para 30 intervalos
+require(gamlss)
+histDist(actmuscular, nbins=30,xlab ='Actividad muscular (v)', 
+         ylab ='Densidad') 
+
+
+#------------------------------------------------------------
+# La función fitDist del paquete gamlss permite buscar las 
+# distribuciones que mejor se ajustan a una variable.
+
+mod <- fitDist(y = datos$actmuscular, k =2,type='realplus')
+mod$fit
+# escoger un modelo con menos AIC
+
+
+#-----------------------------------------------------------
+# Histograma con superposición de la densidad estimada con las 
+#distribuciones que mejor se ajustan.
+
+par(mfrow=c(1,2))
+
+m1<- histDist(actmuscular,data=datos,family= GG,nbins=30,
+              xlab ='Actividad muscular (v)', 
+              ylab ='Densidad')
+m1<- histDist(actmuscular,data=datos,family=BCCGo,nbins=30,
+              xlab ='Actividad muscular (v)', 
+              ylab ='Densidad')
+
+
+
+
+#---------------------------------------------------------------------------------
+# modelo inicial (prueba)
+m <- gamlss(actmuscular~estado,sigma.fo = ~estado, 
+            family = GG,data = datos)
+summary(m)
+
+#---------------------------- -------------------------------
+#Ajustar modelo con distribución GG
+#modelo vacío porque no se incluyeron covariables, 
+#este modelo sirve como punto de partida para la búsqueda 
+#del mejor modelo
+
+empty.GG <- gamlss(actmuscular ~ 1, sigma.fo= ~ 1, data=datos, family=GG,
+                   control=gamlss.control(n.cyc=500))
+
+# función stepGAICAll.A para seleccionar las variables que 
+# mejor modelan los parámetros μ ,σ y v de la variable 
+#respuesta y. Use el siguiente código para ajustar el nuevo 
+#modelo.
+mod.GG <- stepGAICAll.A(object=empty.GG, k=2,
+                        scope=list(lower= ~ 1, 
+           upper= ~ edad + sexo + mano + fdeporte + ocupacion +
+             evitacion + estado + lado),
+                        sigma.scope=list(lower= ~ 1,
+           upper= ~ edad + sexo + mano + fdeporte + ocupacion +
+             evitacion + estado + lado))
+
+summary(mod.GG)
+
+#-----------------------------------------------------------
+#Ajustar modelo con distribución BCCG0
+#modelo vacío porque no se incluyeron covariables, 
+#este modelo sirve como punto de partida para la búsqueda 
+#del mejor modelo
+
+empty.BCCG <- gamlss(actmuscular ~ 1, sigma.fo= ~ 1, data=datos, family=BCCGo,
+                   control=gamlss.control(n.cyc=500))
+
+# función stepGAICAll.A para seleccionar las variables que 
+# mejor modelan los parámetros μ ,σ y v de la variable 
+#respuesta y. Use el siguiente código para ajustar el nuevo 
+#modelo.
+mod.BCCG <- stepGAICAll.A(object=empty.BCCG, k=2,
+                        scope=list(lower= ~ 1, 
+                                   upper= ~ edad + sexo + mano + fdeporte + ocupacion +
+                                     evitacion + estado + lado),
+                        sigma.scope=list(lower= ~ 1,
+                                         upper= ~ edad + sexo + mano + fdeporte + ocupacion +
+                                           evitacion + estado + lado))
+
+summary(mod.BCCG)
+
+#------------------------------------------------------
+# Elección de un modelo
+
+#coeficientes de los modelos-----
+
+#mod.GG
+coef(mod.GG)
+betas <- names(coef(mod.GG))
+# Para ver los nombres que estan en el vector betas
+betas
+#mod.BCCG
+coef(mod.BCCG)
+betas <- names(coef(mod.BCCG))
+
+
+# AIC para modelos---------------
+AIC(mod.GG, k=2)
+AIC(mod.BCCG, k=2)
+
+
+
+# análisis de residuales para los modelos-----
+
+# mod.GG
+plot(mod.GG)
+wp(mod.GG) # Gráfico de gusano
+
+# mod.BCCG
+plot(mod.BCCG)
+wp(mod.BCCG) # Gráfico de gusano
+
+
+
+
+
