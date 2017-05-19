@@ -1,0 +1,101 @@
+edad	sexo	mano	fdeporte	ocupacion	evitacion	estado	lado	actmuscular
+36	m	d	a menudo	no profesional	2,00	reposo	izquierdo	0,6929
+36	m	d	a menudo	no profesional	2,00	reposo	derecho	2,5743
+36	m	d	a menudo	no profesional	2,00	estres	izquierdo	0,7017
+36	m	d	a menudo	no profesional	2,00	estres	derecho	2,5174
+23	f	d	de vez en cuando	estudiante	1,66	reposo	izquierdo	0,6065
+23	f	d	de vez en cuando	estudiante	1,66	reposo	derecho	1,1173
+23	f	d	de vez en cuando	estudiante	1,66	estres	izquierdo	0,6239
+23	f	d	de vez en cuando	estudiante	1,66	estres	derecho	1,0702
+40	m	d	de vez en cuando	profesional	1,66	reposo	izquierdo	0,6901
+40	m	d	de vez en cuando	profesional	1,66	reposo	derecho	0,4968
+40	m	d	de vez en cuando	profesional	1,66	estres	izquierdo	0,6759
+40	m	d	de vez en cuando	profesional	1,66	estres	derecho	0,4974
+37	f	d	a menudo	estudiante	2,00	reposo	izquierdo	0,8264
+37	f	d	a menudo	estudiante	2,00	reposo	derecho	1,2600
+37	f	d	a menudo	estudiante	2,00	estres	izquierdo	0,7312
+37	f	d	a menudo	estudiante	2,00	estres	derecho	1,7976
+53	m	d	muy a menudo	profesional	2,66	reposo	izquierdo	0,7313
+53	m	d	muy a menudo	profesional	2,66	reposo	derecho	1,1174
+53	m	d	muy a menudo	profesional	2,66	estres	izquierdo	0,8846
+53	m	d	muy a menudo	profesional	2,66	estres	derecho	1,1685
+22	f	d	 a menudo	estudiante	2,33	reposo	izquierdo	0,4941
+22	f	d	 a menudo	estudiante	2,33	reposo	derecho	1,1487
+22	f	d	 a menudo	estudiante	2,33	estres	izquierdo	0,5161
+22	f	d	 a menudo	estudiante	2,33	estres	derecho	1,1607
+21	m	d	muy a menudo	estudiante	2,00	reposo	izquierdo	0,8867
+21	m	d	muy a menudo	estudiante	2,00	reposo	derecho	1,3783
+21	m	d	muy a menudo	estudiante	2,00	estres	izquierdo	0,8052
+21	m	d	muy a menudo	estudiante	2,00	estres	derecho	1,4216
+21	f	d	de vez en cuando	estudiante	2,00	reposo	izquierdo	0,7249
+21	f	d	de vez en cuando	estudiante	2,00	reposo	derecho	1,1879
+21	f	d	de vez en cuando	estudiante	2,00	estres	izquierdo	0,7819
+21	f	d	de vez en cuando	estudiante	2,00	estres	derecho	1,1594
+31	m	z	de vez en cuando	profesional	1,66	reposo	izquierdo	0,8308
+31	m	z	de vez en cuando	profesional	1,66	reposo	derecho	1,2147
+31	m	z	de vez en cuando	profesional	1,66	estres	izquierdo	0,8642
+31	m	z	de vez en cuando	profesional	1,66	estres	derecho	1,0667
+23	m	d	a menudo	profesional	1,67	reposo	izquierdo	0,5431
+23	m	d	a menudo	profesional	1,67	reposo	derecho	1,0791
+23	m	d	a menudo	profesional	1,67	estres	izquierdo	0,5544
+23	m	d	a menudo	profesional	1,67	estres	derecho	1,0994
+35	f	d	a menudo	estudiante	2,33	reposo	izquierdo	0,6640
+35	f	d	a menudo	estudiante	2,33	reposo	derecho	1,1007
+35	f	d	a menudo	estudiante	2,33	estres	izquierdo	0,6953
+35	f	d	a menudo	estudiante	2,33	estres	derecho	1,0752
+32	f	d	casi nunca	profesional	2,00	reposo	izquierdo	0,7344
+32	f	d	casi nunca	profesional	2,00	reposo	derecho	1,4140
+32	f	d	casi nunca	profesional	2,00	estres	izquierdo	0,7492
+32	f	d	casi nunca	profesional	2,00	estres	derecho	1,4116
+38	m	d	a menudo	profesional	2,00	reposo	izquierdo	1,0036
+38	m	d	a menudo	profesional	2,00	reposo	derecho	1,7189
+38	m	d	a menudo	profesional	2,00	estres	izquierdo	0,9388
+38	m	d	a menudo	profesional	2,00	estres	derecho	1,3431
+36	m	d	muy a menudo	estudiante	1,67	reposo	izquierdo	0,7139
+36	m	d	muy a menudo	estudiante	1,67	reposo	derecho	1,2040
+36	m	d	muy a menudo	estudiante	1,67	estres	izquierdo	0,7626
+36	m	d	muy a menudo	estudiante	1,67	estres	derecho	1,2135
+29	f	d	de vez en cuando	estudiante	2,33	reposo	izquierdo	0,5922
+29	f	d	de vez en cuando	estudiante	2,33	reposo	derecho	1,3278
+29	f	d	de vez en cuando	estudiante	2,33	estres	izquierdo	0,6131
+29	f	d	de vez en cuando	estudiante	2,33	estres	derecho	1,1136
+26	m	d	a menudo	profesional	2,33	reposo	izquierdo	4,0088
+26	m	d	a menudo	profesional	2,33	reposo	derecho	0,7062
+26	m	d	a menudo	profesional	2,33	estres	izquierdo	4,0233
+26	m	d	a menudo	profesional	2,33	estres	derecho	0,6712
+40	m	d	de vez en cuando	no profesional	1,67	reposo	izquierdo	0,5329
+40	m	d	de vez en cuando	no profesional	1,67	reposo	derecho	1,1422
+40	m	d	de vez en cuando	no profesional	1,67	estres	izquierdo	0,5661
+40	m	d	de vez en cuando	no profesional	1,67	estres	derecho	1,2051
+22	f	d	de vez en cuando	estudiante	1,67	reposo	izquierdo	0,5004
+22	f	d	de vez en cuando	estudiante	1,67	reposo	derecho	1,0994
+22	f	d	de vez en cuando	estudiante	1,67	estres	izquierdo	0,5110
+22	f	d	de vez en cuando	estudiante	1,67	estres	derecho	1,1279
+41	f	d	de vez en cuando	profesional	2,00	reposo	izquierdo	0,7827
+41	f	d	de vez en cuando	profesional	2,00	reposo	derecho	0,5592
+41	f	d	de vez en cuando	profesional	2,00	estres	izquierdo	0,8031
+41	f	d	de vez en cuando	profesional	2,00	estres	derecho	0,5554
+55	f	d	a menudo	no profesional	2,00	reposo	izquierdo	0,7293
+55	f	d	a menudo	no profesional	2,00	reposo	derecho	1,0828
+55	f	d	a menudo	no profesional	2,00	estres	izquierdo	0,7920
+55	f	d	a menudo	no profesional	2,00	estres	derecho	1,0532
+20	f	d	de vez en cuando	estudiante	2,00	reposo	izquierdo	0,7321
+20	f	d	de vez en cuando	estudiante	2,00	reposo	derecho	1,0229
+20	f	d	de vez en cuando	estudiante	2,00	estres	izquierdo	0,7256
+20	f	d	de vez en cuando	estudiante	2,00	estres	derecho	1,0497
+29	f	z	a menudo	estudiante 	1,67	reposo	izquierdo	0,6660
+29	f	z	a menudo	estudiante 	1,67	reposo	derecho	1,0565
+29	f	z	a menudo	estudiante 	1,67	estres	izquierdo	0,6941
+29	f	z	a menudo	estudiante 	1,67	estres	derecho	1,0665
+19	m	d	a menudo	estudiante	2,00	reposo	izquierdo	0,8341
+19	m	d	a menudo	estudiante	2,00	reposo	derecho	1,4532
+19	m	d	a menudo	estudiante	2,00	estres	izquierdo	0,8937
+19	m	d	a menudo	estudiante	2,00	estres	derecho	1,5503
+23	f	d	de vez en cuando	estudiante	1,67	reposo	izquierdo	0,7521
+23	f	d	de vez en cuando	estudiante	1,67	reposo	derecho	1,2863
+23	f	d	de vez en cuando	estudiante	1,67	estres	izquierdo	0,7716
+23	f	d	de vez en cuando	estudiante	1,67	estres	derecho	1,3234
+24	m	d	a menudo	estudiante	2,67	reposo	izquierdo	0,7292
+24	m	d	a menudo	estudiante	2,67	reposo	derecho	1,3961
+24	m	d	a menudo	estudiante	2,67	estres	izquierdo	0,7772
+24	m	d	a menudo	estudiante	2,67	estres	derecho	1,3917
